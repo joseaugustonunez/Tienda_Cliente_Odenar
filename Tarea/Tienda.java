@@ -41,8 +41,8 @@ public class Tienda {
 
         Cliente aux;
       
-        for(int i=0; i<9-1; i++){
-        for (int j=i+1; j<9; j++) {
+        for(int i=0; i<cliente.length-1; i++){
+        for (int j=i+1; j<cliente.length; j++) {
 				if (cliente[i].getCodigo() > cliente[j].getCodigo()) {
 					aux = cliente[i];
 					cliente[i] = cliente[j];
@@ -51,7 +51,7 @@ public class Tienda {
         }
     } 
     System.out.println("--------ORDENADO POR CODIGO-------");
-    for(int i=0;i<9;i++){
+    for(int i=0;i<cliente.length;i++){
             System.out.println(" " + cliente[i].getNombre() + "," + cliente[i].getApellido() + ", " + cliente[i].getCodigo());
     }
 }
